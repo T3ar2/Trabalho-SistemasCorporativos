@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Farmacia.ApiGateway/Farmacia.ApiGateway.csproj" />
+  <Project Path="Farmacia.Catalogo.API/Farmacia.Catalogo.API.csproj" />
+  <Project Path="Farmacia.Estoque.API/Farmacia.Estoque.API.csproj" />
+  <Project Path="Farmacia.SNGPC.API/Farmacia.SNGPC.API.csproj" />
+</Solution>

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "yYN2AXOP8x8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.ApiGateway\\Farmacia.ApiGateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\yarp.reverseproxy\\2.3.0\\yarp.reverseproxy.2.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

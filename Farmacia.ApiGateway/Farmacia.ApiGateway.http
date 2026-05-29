@@ -1,0 +1,6 @@
+@Farmacia.ApiGateway_HostAddress = http://localhost:5012
+
+GET {{Farmacia.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

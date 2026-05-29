@@ -1,0 +1,6 @@
+@Farmacia.SNGPC.API_HostAddress = http://localhost:5022
+
+GET {{Farmacia.SNGPC.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

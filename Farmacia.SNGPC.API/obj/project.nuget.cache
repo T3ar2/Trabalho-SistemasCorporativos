@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QFA/G8amEc8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\Farmacia.SNGPC.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "C:\\Users\\nicol\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
