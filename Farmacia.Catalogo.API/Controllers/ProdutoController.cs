@@ -37,7 +37,6 @@ namespace Farmacia.Catalogo.API.Controllers
             return CreatedAtAction(nameof(ListarTodos), new { id = produto.Id }, produto);
         }
 
-        // GET: api/produto/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarPorId(Guid id)
         {
@@ -51,7 +50,6 @@ namespace Farmacia.Catalogo.API.Controllers
             return Ok(produto);
         }
 
-        // PUT: api/produto/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Atualizar(Guid id, [FromBody] Produto produtoAtualizado)
         {

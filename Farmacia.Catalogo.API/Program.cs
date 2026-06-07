@@ -8,7 +8,15 @@ var connectionString = builder.Configuration.GetConnectionString("CatalogoConnec
 builder.Services.AddDbContext<CatalogoDbContext>(options =>
     options.UseMySql(
         connectionString,
-        new MySqlServerVersion(new Version(8, 0, 30))
+        new MySqlServerVersion(new Version(8, 0, 30)),
+        mySqlOptions =>
+        {
+            mySqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5,
+                maxRetryDelay: TimeSpan.FromSeconds(30),
+                errorNumbersToAdd: null
+            );
+        }
     ));
 
 builder.Services.AddControllers();
