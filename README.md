@@ -4,14 +4,14 @@ Em sistemas corporativos complexos, a imposição de um único modelo de base de
 # 1.1. Domínios Relacionais (Catálogo e Estoque)
 Para os serviços de Catálogo e Estoque, optou-se pela utilização do Sistema de Gestão de Bases de Dados Relacionais (SGBDR) MySQL, orquestrado pelo mapeador objeto-relacional (ORM) Entity Framework Core.
 
-Justificativa: Entidades como Produtos e Lotes de Estoque possuem fortes invariantes de domínio e dependências transacionais (conformidade ACID). O modelo relacional assegura a integridade referencial necessária para operações financeiras e de inventário.
+Entidades como Produtos e Lotes de Estoque possuem fortes invariantes de domínio e dependências transacionais (conformidade ACID). O modelo relacional assegura a integridade referencial necessária para operações financeiras e de inventário.
 
 Isolamento de Dados (Database per Service): Cada microsserviço possui o seu próprio contexto de dados (CatalogoDbContext e EstoqueDbContext). Este padrão evita o acoplamento pelo nível de base de dados, garantindo que uma sobrecarga nas consultas do catálogo não comprometa as operações de baixa no stock.
 
 # 1.2. Domínio Orientado a Documentos (SNGPC)
 Para o serviço que processa as retenções de receitas médicas (SNGPC), foi adotado o MongoDB, um banco de dados NoSQL orientado a documentos.
 
-Justificativa: As receitas médicas e os registos de auditoria governamental assemelham-se a documentos imutáveis e densos em informação. A utilização do BSON permite a inserção assíncrona de alto débito (high-throughput) sem a sobrecarga do bloqueio de tabelas (table locking) típico dos SGBDRs. Adicionalmente, oferece flexibilidade de esquema caso a entidade reguladora (Anvisa) altere os requisitos dos dados no futuro.
+As receitas médicas e os registos de auditoria governamental assemelham-se a documentos imutáveis e densos em informação. A utilização do BSON permite a inserção assíncrona de alto débito (high-throughput) sem a sobrecarga do bloqueio de tabelas (table locking) típico dos SGBDRs. Adicionalmente, oferece flexibilidade de esquema caso a entidade reguladora (Anvisa) altere os requisitos dos dados no futuro.
 
 # 2. Análise Detalhada dos Componentes e Padrões de Projeto
 # 2.1. Microsserviço de Catálogo (Farmacia.Catalogo.API)
@@ -38,4 +38,4 @@ Embora de momento o projeto esteja inicializado de forma basilar no ecossistema 
 # 2.4. Documentação de Contratos (Swagger/OpenAPI)
 Todos os microsserviços implementam a especificação OpenAPI através das bibliotecas Swashbuckle (builder.Services.AddSwaggerGen()).
 
-Justificativa Científica: Num ambiente de Sistemas Corporativos sustentado por equipas multidisciplinares, o contrato da API é o artefacto mais vital da integração de sistemas. O OpenAPI fornece uma documentação viva, testável e legível por máquinas, reduzindo a fricção (integration tax) entre as equipas de Front-end e Back-end.
+Num ambiente de Sistemas Corporativos sustentado por equipas multidisciplinares, o contrato da API é o artefacto mais vital da integração de sistemas. O OpenAPI fornece uma documentação viva, testável e legível por máquinas, reduzindo a fricção (integration tax) entre as equipas de Front-end e Back-end.
