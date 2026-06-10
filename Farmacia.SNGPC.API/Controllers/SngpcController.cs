@@ -29,7 +29,6 @@ namespace Farmacia.SNGPC.API.Controllers
         [HttpPost("reter-receita")]
         public async Task<IActionResult> ReterReceita([FromBody] ReceitaMedica receita)
         {
-            // Validação simples
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             await _receitasCollection.InsertOneAsync(receita);

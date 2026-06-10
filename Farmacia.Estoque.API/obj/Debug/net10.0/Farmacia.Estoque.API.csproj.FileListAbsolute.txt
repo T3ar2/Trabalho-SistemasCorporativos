@@ -22,9 +22,6 @@ C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabal
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\Mono.TextTemplating.dll
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\MySqlConnector.dll
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\System.CodeDom.dll
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\System.Composition.AttributedModel.dll
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.Estoque.API\bin\Debug\net10.0\System.Composition.Convention.dll

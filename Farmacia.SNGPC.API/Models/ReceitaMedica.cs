@@ -12,6 +12,7 @@ namespace Farmacia.SNGPC.API.Models
 
         [Required]
         [BsonElement("produtoId")]
+        [BsonRepresentation(BsonType.String)]
         public Guid ProdutoId { get; set; }
 
         [Required]

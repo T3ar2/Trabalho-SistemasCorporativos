@@ -92,7 +92,7 @@ namespace Farmacia.Catalogo.API.Controllers
             ctx.Produtos.Remove(produto);
             await ctx.SaveChangesAsync();
 
-            return NoContent(); // Retorna 204
+            return NoContent(); 
         }
     }
 }

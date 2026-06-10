@@ -23,7 +23,6 @@ namespace Farmacia.Estoque.API.Controllers
             return Ok(await _context.Lotes.ToListAsync());
         }
 
-        // POST: api/estoque/entrada
         [HttpPost("entrada")]
         public async Task<IActionResult> EntradaDeEstoque([FromBody] LoteEstoque lote)
         {
