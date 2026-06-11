@@ -1,41 +1,67 @@
-# 1. Padrão de Persistência Poliglota (Polyglot Persistence)
-Em sistemas corporativos complexos, a imposição de um único modelo de base de dados para todos os domínios constitui um antipadrão. A arquitetura implementada adota o princípio de Persistência Poliglota, em que a tecnologia de armazenamento é selecionada de acordo com as exigências de leitura, escrita e estrutura de dados de cada contexto delimitado (Bounded Context).
+# 1. Visão Geral do Sistema
+O FARMACIA_GATEWAY_SYSTEM é uma plataforma corporativa modular desenvolvida para gerenciar as operações fundamentais de uma rede de farmácias. O sistema adota uma arquitetura baseada em microsserviços (APIs independentes), onde cada módulo possui responsabilidades bem delimitadas e isolamento de dados.
 
-# 1.1. Domínios Relacionais (Catálogo e Estoque)
-Para os serviços de Catálogo e Estoque, optou-se pela utilização do Sistema de Gestão de Bases de Dados Relacionais (SGBDR) MySQL, orquestrado pelo mapeador objeto-relacional (ORM) Entity Framework Core.
+O ecossistema é centralizado por um API Gateway, que atua como a única porta de entrada para os clientes (aplicações web, mobile ou integrações externas), garantindo o roteamento inteligente, a segurança e a abstração da infraestrutura interna.
 
-Entidades como Produtos e Lotes de Estoque possuem fortes invariantes de domínio e dependências transacionais (conformidade ACID). O modelo relacional assegura a integridade referencial necessária para operações financeiras e de inventário.
+# 2. Componentes Principais
+O sistema é dividido em quatro projetos principais, descritos a seguir:
 
-Isolamento de Dados (Database per Service): Cada microsserviço possui o seu próprio contexto de dados (CatalogoDbContext e EstoqueDbContext). Este padrão evita o acoplamento pelo nível de base de dados, garantindo que uma sobrecarga nas consultas do catálogo não comprometa as operações de baixa no stock.
+## A. API de Catálogo (Farmacia.Catalogo.API)
+Propósito: Responsável pelo gerenciamento do portfólio de produtos oferecidos pela farmácia e suas respectivas classificações comerciais.
 
-# 1.2. Domínio Orientado a Documentos (SNGPC)
-Para o serviço que processa as retenções de receitas médicas (SNGPC), foi adotado o MongoDB, um banco de dados NoSQL orientado a documentos.
+Classes Principais (Models):
 
-As receitas médicas e os registos de auditoria governamental assemelham-se a documentos imutáveis e densos em informação. A utilização do BSON permite a inserção assíncrona de alto débito (high-throughput) sem a sobrecarga do bloqueio de tabelas (table locking) típico dos SGBDRs. Adicionalmente, oferece flexibilidade de esquema caso a entidade reguladora (Anvisa) altere os requisitos dos dados no futuro.
+Produto: Representa o item comercializável. Contém campos como identificador único, nome, descrição, preço e o vínculo com uma categoria.
 
-# 2. Análise Detalhada dos Componentes e Padrões de Projeto
-# 2.1. Microsserviço de Catálogo (Farmacia.Catalogo.API)
-Este serviço atua como a fonte de verdade para os dados mestres dos medicamentos e produtos.
+CategoriaProduto: Define as classificações dos produtos (ex.: Medicamentos, Cosméticos, Suplementos), contendo campos de identificação e nome da categoria.
 
-Resiliência e Padrão Retry: Na configuração da injeção de dependência do DbContext, foi implementada a política EnableRetryOnFailure (com um máximo de 5 tentativas e atraso de 30 segundos). Em arquiteturas distribuídas baseadas na nuvem, as falhas de rede são consideradas eventos expectáveis (falhas transitórias). Este padrão previne que flutuações momentâneas na latência da rede com a base de dados resultem na indisponibilidade do serviço.
+Controlador (ProdutoController): Expõe os endpoints HTTP para criação, leitura, atualização e exclusão (CRUD) de produtos e categorias.
 
-Validação por Data Annotations: A classe Produto emprega atributos de validação como [Required], [StringLength(150)] e [Range]. Esta abordagem consubstancia o padrão de Validação de Entrada (Input Validation) no nível do modelo de domínio, atuando como uma Camada Anticorrupção (Anti-Corruption Layer) preliminar. Garante-se que o estado de um objeto Produto é sempre consistente antes de qualquer operação de I/O ou processamento de negócio.
+## B. API de Estoque (Farmacia.Estoque.API)
+Propósito: Controla o volume físico, o armazenamento e a rastreabilidade dos produtos através de lotes e validades.
 
-# 2.2. Microsserviço SNGPC (Farmacia.SNGPC.API)
-Este serviço gere o domínio submetido a estritas regulamentações governamentais.
+Classes Principais (Models):
 
-Mapeamento de Dados e Padrão Options: A serialização BSON é garantida através de atributos nativos, mapeando a classe ReceitaMedica diretamente para a semântica do MongoDB (e.g., [BsonId], [BsonRepresentation(BsonType.ObjectId)]). Adicionalmente, a injeção da configuração da base de dados utiliza o Padrão Options (IOptions<MongoDbSettings>). Este padrão académico preconiza o encapsulamento de configurações num objeto tipado, promovendo o Princípio da Responsabilidade Única (SRP) e facilitando a cobertura por testes unitários ao injetar configurações mockadas.
+LoteEstoque: Gerencia os lotes de mercadorias armazenados. Possui campos essenciais como identificador do lote, quantidade em estoque, data de fabricação, data de validade e o identificador do produto correspondente (vínculo lógico com o Catálogo).
 
-Conceção RESTful: O controlador SngpcController reflete os princípios RESTful através do uso semântico de verbos HTTP (GET para listagens e POST para criação) e do retorno de códigos de estado padronizados (e.g., CreatedAtAction retornando HTTP 201 e a rota para o recurso recém-criado).
+Controlador (EstoqueController): Fornece métodos para consulta de níveis de estoque, entrada de novas mercadorias e baixa de itens.
 
-# 2.3. Padrão API Gateway (Farmacia.ApiGateway)
-A presença de um projeto dedicado ao API Gateway atende a um dos desafios centrais dos sistemas distribuídos: a coesão da comunicação com os clientes externos (Aplicações Mobile, Web ou B2B).
+C. API do SNGPC (Farmacia.SNGPC.API)
+Propósito: Gerencia o fluxo de medicamentos controlados e antimicrobianos, atendendo às exigências regulatórias do Sistema Nacional de Gerenciamento de Produtos Controlados (SNGPC).
 
-Ponto Único de Entrada (Single Entry Point): A aplicação cliente não deve necessitar de conhecer a topologia interna da rede nem endereços IP individuais do Catálogo, do Estoque ou do SNGPC. O Gateway atua como um intermediário de roteamento.
+Classes Principais (Models):
 
-Embora de momento o projeto esteja inicializado de forma basilar no ecossistema .NET, do ponto de vista arquitetural, o Gateway será futuramente o local apropriado para implementar padrões transversais de Sistemas Corporativos, tais como: terminação SSL, autenticação centralizada (e.g., validação de tokens JWT), agregação de chamadas e limitação de taxa (Rate Limiting).
+ReceitaMedica: Modela as prescrições médicas retidas na venda de controlados. Contém campos para identificação da receita, dados do paciente, dados do médico (CRM), data de emissão e a lista de medicamentos controlados prescritos.
 
-# 2.4. Documentação de Contratos (Swagger/OpenAPI)
-Todos os microsserviços implementam a especificação OpenAPI através das bibliotecas Swashbuckle (builder.Services.AddSwaggerGen()).
+MongoDbSettings: Configuração técnica interna para conexão com o banco de dados de persistência.
 
-Num ambiente de Sistemas Corporativos sustentado por equipas multidisciplinares, o contrato da API é o artefacto mais vital da integração de sistemas. O OpenAPI fornece uma documentação viva, testável e legível por máquinas, reduzindo a fricção (integration tax) entre as equipas de Front-end e Back-end.
+Controlador (SngpcController): Disponibiliza métodos para validação, registro e escrituração de receitas médicas.
+
+# 3. Fluxo de Comunicação
+O fluxo de dados no FARMACIA_GATEWAY_SYSTEM segue um padrão centralizado e transparente para o usuário:
+
+Requisição do Cliente: O cliente externo envia uma requisição HTTP para o endereço único do sistema, gerenciado pelo API Gateway (Farmacia.ApiGateway).
+
+Interpretação e Roteamento: O Gateway intercepta a requisição, analisa o prefixo da URL (ex.: /api/produtos, /api/estoque, /api/sngpc) e consulta suas regras internas de redirecionamento.
+
+Encaminhamento Interno: O Gateway atua como um proxy reverso, repassando a requisição para a API correspondente, que opera de forma isolada na rede interna.
+
+Retorno da Resposta: A API interna processa a solicitação, realiza as operações no banco de dados e devolve o resultado ao Gateway, que por sua vez formata e entrega a resposta final ao cliente.
+
+# 4. Configurações e Tecnologias
+O ecossistema utiliza a plataforma .NET 10 e adota tecnologias específicas para a necessidade de cada componente:
+
+API Gateway (Farmacia.ApiGateway): Implementado utilizando a tecnologia YARP (Yet Another Reverse Proxy) da Microsoft. Suas rotas e destinos são definidos e estruturados dinamicamente através do arquivo de configuração appsettings.json.
+
+Catálogo e Estoque: Desenvolvidos utilizando o Entity Framework Core associado ao provedor Pomelo MySQL, realizando a persistência de dados em um banco de dados relacional MySQL. Garante alta consistência para transações financeiras e de inventário.
+
+SNGPC: Utiliza o banco de dados NoSQL MongoDB através do MongoDB Driver. A escolha por um banco orientado a documentos confere a flexibilidade necessária para armazenar históricos de receitas e dados regulatórios complexos.
+
+# 5. Objetivo da Arquitetura
+A estrutura arquitetural escolhida para o sistema visa assegurar três pilares fundamentais:
+
+Modularidade (Desacoplamento): Como cada API possui seu próprio banco de dados e regras de negócio, uma eventual manutenção ou falha temporária na API de Catálogo não interrompe as operações de validação de receitas na API do SNGPC.
+
+Segurança Centralizada: O API Gateway funciona como um escudo para a infraestrutura. As APIs internas não ficam expostas diretamente à internet, reduzindo significativamente a superfície de ataques e centralizando políticas de autenticação e limitação de acessos (rate limiting).
+
+Escalabilidade Independente: Se houver um aumento expressivo nas consultas de preços e produtos (Catálogo) devido a uma campanha promocional, apenas a API de Catálogo precisa receber mais recursos computacionais, otimizando o uso da infraestrutura sem impactar os demais serviços.
