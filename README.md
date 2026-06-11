@@ -1,3 +1,7 @@
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/0dcf48fa-a746-42db-9e49-16f81670dbf0" />
+
+
+
 # 1. Visão Geral do Sistema
 O FARMACIA_GATEWAY_SYSTEM é uma plataforma corporativa modular desenvolvida para gerenciar as operações fundamentais de uma rede de farmácias. O sistema adota uma arquitetura baseada em microsserviços (APIs independentes), onde cada módulo possui responsabilidades bem delimitadas e isolamento de dados.
 
