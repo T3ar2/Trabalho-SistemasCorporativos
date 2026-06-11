@@ -1,7 +1,8 @@
 # Diagrama do Sistema
 
 
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/0dcf48fa-a746-42db-9e49-16f81670dbf0" />
+<img width="1152" height="648" alt="Untitled" src="https://github.com/user-attachments/assets/2090549c-e55e-486f-a471-35095e34bf7b" />
+
 
 # 1. Visão Geral do Sistema
 O sistema foi estruturado para fragmentar responsabilidades complexas em módulos especializados, eliminando o acoplamento excessivo comum em sistemas monolíticos. A arquitetura divide-se em serviços verticais de negócio e uma camada de infraestrutura de entrada.
