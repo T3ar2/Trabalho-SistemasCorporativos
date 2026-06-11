@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "DnsClient/1.6.1": {
@@ -287,11 +287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\Farmacia.SNGPC.API.csproj",
+      "projectUniqueName": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Up\\5  semestre\\Systemas Corporativos\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\Farmacia.SNGPC.API.csproj",
       "projectName": "Farmacia.SNGPC.API",
-      "projectPath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\Farmacia.SNGPC.API.csproj",
+      "projectPath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Up\\5  semestre\\Systemas Corporativos\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\Farmacia.SNGPC.API.csproj",
       "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\obj\\",
+      "outputPath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Up\\5  semestre\\Systemas Corporativos\\Trabalho-SistemasCorporativos\\Farmacia.SNGPC.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -310,6 +310,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {}
         }
@@ -324,10 +325,11 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
@@ -358,7 +360,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

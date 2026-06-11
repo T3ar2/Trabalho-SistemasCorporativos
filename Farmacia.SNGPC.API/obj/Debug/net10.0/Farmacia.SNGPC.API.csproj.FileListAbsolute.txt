@@ -38,3 +38,43 @@ C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabal
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.pdb
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.genruntimeconfig.cache
 C:\Users\nicol\OneDrive\Área de Trabalho\Trabalho de System Corporationg\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\ref\Farmacia.SNGPC.API.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\appsettings.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.staticwebassets.endpoints.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.exe
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.deps.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.runtimeconfig.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Farmacia.SNGPC.API.pdb
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\DnsClient.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\SharpCompress.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\Snappier.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\bin\Debug\net10.0\ZstdSharp.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.csproj.AssemblyReference.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.AssemblyInfoInputs.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.AssemblyInfo.cs
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.csproj.CoreCompileInputs.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.sourcelink.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\scopedcss\bundle\Farmacia.SNGPC.API.styles.css
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.FC8019C3.Up2Date
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\refint\Farmacia.SNGPC.API.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.pdb
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\Farmacia.SNGPC.API.genruntimeconfig.cache
+C:\Users\nicol\OneDrive\Área de Trabalho\Up\5  semestre\Systemas Corporativos\Trabalho-SistemasCorporativos\Farmacia.SNGPC.API\obj\Debug\net10.0\ref\Farmacia.SNGPC.API.dll

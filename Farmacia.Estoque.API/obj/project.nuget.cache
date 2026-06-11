@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NpTuVTltgW8=",
+  "dgSpecHash": "QtLS8GHhgOo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Trabalho de System Corporationg\\Trabalho-SistemasCorporativos\\Farmacia.Estoque.API\\Farmacia.Estoque.API.csproj",
+  "projectFilePath": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\Up\\5  semestre\\Systemas Corporativos\\Trabalho-SistemasCorporativos\\Farmacia.Estoque.API\\Farmacia.Estoque.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicol\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\nicol\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
